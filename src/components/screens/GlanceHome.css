@@ -46,11 +46,30 @@
   border-radius: 10px;
   padding: 10px 14px;
   flex: 1;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.summary-chip.tappable:hover,
+.summary-chip.tappable:active {
+  background: rgba(255,255,255,0.18);
 }
 
 .summary-chip.urgent {
   background: rgba(220,38,38,0.2);
   border: 1px solid rgba(220,38,38,0.3);
+}
+
+.summary-chip.urgent.tappable:hover,
+.summary-chip.urgent.tappable:active {
+  background: rgba(220,38,38,0.3);
+}
+
+.chip-arrow {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-left: auto;
+  align-self: center;
 }
 
 .chip-count {

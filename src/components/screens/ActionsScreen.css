@@ -1,0 +1,223 @@
+.actions-screen {
+  background: var(--grey-50);
+}
+
+.actions-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.done-tally {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+/* Period tabs */
+.period-tabs {
+  display: flex;
+  gap: 0;
+  padding: 12px 20px 0;
+  border-bottom: 1px solid var(--grey-200);
+  background: var(--grey-50);
+}
+
+.period-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-400);
+  border-bottom: 2.5px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.15s;
+}
+
+.period-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-count {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--danger);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Empty state */
+.actions-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 60px 32px;
+}
+
+.empty-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--success-light);
+  color: var(--success);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.empty-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--grey-700);
+}
+
+.empty-sub {
+  font-size: 14px;
+  color: var(--grey-400);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Action list */
+.actions-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+}
+
+/* Project group */
+.project-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.project-group-name {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--grey-500);
+}
+
+.status-pip {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--pip-color);
+  background: color-mix(in srgb, var(--pip-color) 12%, white);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* Action card */
+.action-card-flat {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.action-card-top {
+  display: flex;
+}
+
+.action-card-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-800);
+  line-height: 1.4;
+}
+
+.action-card-source {
+  font-size: 12px;
+  color: var(--grey-400);
+}
+
+.action-card-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+/* Reuse confirm/dismiss from Screen.css via .action-confirm / .action-dismiss */
+.action-confirm {
+  flex: 1;
+  padding: 9px;
+  background: var(--success-light);
+  color: var(--success);
+  border: 1.5px solid #86EFAC;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.action-confirm:hover {
+  background: var(--success);
+  color: white;
+}
+
+.action-dismiss {
+  flex: 1;
+  padding: 9px;
+  background: var(--grey-100);
+  color: var(--grey-500);
+  border: 1.5px solid var(--grey-200);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.action-dismiss:hover {
+  background: var(--grey-200);
+  color: var(--grey-700);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-high {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.badge-review {
+  background: var(--warning-light);
+  color: var(--warning);
+}

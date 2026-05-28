@@ -6,9 +6,10 @@ import './GlanceHome.css'
 interface Props {
   onSelectProject: (name: string) => void
   onResync: () => void
+  onViewActions: () => void
 }
 
-export default function GlanceHome({ onSelectProject, onResync }: Props) {
+export default function GlanceHome({ onSelectProject, onResync, onViewActions }: Props) {
   const [syncing, setSyncing] = useState(false)
 
   const totalToday = PROJECTS.reduce((n, p) => n + p.actionsToday.filter(a => !a.done && !a.dismissed).length, 0)
@@ -34,14 +35,16 @@ export default function GlanceHome({ onSelectProject, onResync }: Props) {
       </div>
 
       <div className="summary-strip">
-        <div className="summary-chip urgent">
+        <button className="summary-chip urgent tappable" onClick={onViewActions}>
           <span className="chip-count">{totalToday}</span>
           <span className="chip-label">need action today</span>
-        </div>
-        <div className="summary-chip">
+          <span className="chip-arrow">→</span>
+        </button>
+        <button className="summary-chip tappable" onClick={onViewActions}>
           <span className="chip-count">{totalWeek}</span>
           <span className="chip-label">due this week</span>
-        </div>
+          <span className="chip-arrow">→</span>
+        </button>
       </div>
 
       <div className="section-heading" style={{ marginTop: 4 }}>Active projects</div>
