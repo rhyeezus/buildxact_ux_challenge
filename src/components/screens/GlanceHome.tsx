@@ -30,23 +30,28 @@ export default function GlanceHome({ onSelectProject, onResync, onViewActions }:
       </div>
 
       <div className="glance-greeting">
-        <h1 className="greeting-text">Good morning. <br />Here's your day.</h1>
+        <p className="greeting-date">{new Date().toLocaleDateString('en-AU', { weekday: 'long', day: 'numeric', month: 'long' })}</p>
+        <h1 className="greeting-text">Good morning.</h1>
       </div>
 
-      <div className="summary-strip">
-        <button className="summary-chip urgent tappable" onClick={onViewActions}>
-          <span className="chip-count">{totalToday}</span>
-          <span className="chip-label">need action today</span>
-          <span className="chip-arrow">→</span>
+      <div className="action-rows">
+        <button className="action-row urgent" onClick={onViewActions}>
+          <div className="action-row-left">
+            <span className="action-row-count">{totalToday}</span>
+            <span className="action-row-label">need action today</span>
+          </div>
+          <span className="action-row-arrow">→</span>
         </button>
-        <button className="summary-chip tappable" onClick={onViewActions}>
-          <span className="chip-count">{totalWeek}</span>
-          <span className="chip-label">due this week</span>
-          <span className="chip-arrow">→</span>
+        <button className="action-row" onClick={onViewActions}>
+          <div className="action-row-left">
+            <span className="action-row-count muted">{totalWeek}</span>
+            <span className="action-row-label">due this week</span>
+          </div>
+          <span className="action-row-arrow">→</span>
         </button>
       </div>
 
-      <div className="section-heading" style={{ marginTop: 4 }}>Active projects</div>
+      <div className="section-heading">Active projects</div>
 
       <div className="project-list">
         {PROJECTS.map(project => (
