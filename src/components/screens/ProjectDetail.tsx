@@ -12,8 +12,8 @@ type Section = 'today' | 'week' | 'month'
 
 export default function ProjectDetail({ projectName, onBack }: Props) {
   const project = PROJECTS.find(p => p.name === projectName)!
-  const [expanded, setExpanded] = useState<Set<Section>>(new Set(['today']))
-  const [summaryOpen, setSummaryOpen] = useState(false)
+  const [expanded, setExpanded] = useState<Set<Section>>(new Set([]))
+  const [summaryOpen, setSummaryOpen] = useState(true)
   const [actionStates, setActionStates] = useState<Record<string, { done: boolean; dismissed: boolean }>>({})
 
   const getState = (id: string, orig: { done: boolean; dismissed: boolean }) =>

@@ -3,7 +3,11 @@ import { PROJECTS, ActionItem } from '../../data/projects'
 import './Screen.css'
 import './ActionsScreen.css'
 
-export default function ActionsScreen() {
+interface Props {
+  onBack: () => void
+}
+
+export default function ActionsScreen({ onBack }: Props) {
   const [tab, setTab] = useState<'today' | 'week'>('today')
   const [actionStates, setActionStates] = useState<Record<string, { done: boolean; dismissed: boolean }>>({})
 
@@ -28,8 +32,9 @@ export default function ActionsScreen() {
 
   return (
     <div className="screen actions-screen">
-      <div className="screen-header">
+      <div className="screen-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="bx-logo">Buildxact</div>
+        <button className="btn-back" onClick={onBack}>← Home</button>
       </div>
 
       <div className="actions-title-row">

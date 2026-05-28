@@ -1,6 +1,6 @@
 .mobile-frame {
   width: 390px;
-  min-height: 844px;
+  height: 844px;
   background: var(--grey-50);
   border-radius: 48px;
   box-shadow:
@@ -11,6 +11,7 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 
 .mobile-notch {
