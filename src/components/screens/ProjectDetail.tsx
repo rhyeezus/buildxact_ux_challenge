@@ -29,7 +29,7 @@ export default function ProjectDetail({ projectName, onBack }: Props) {
     })
   }
 
-  const renderActions = (items: ActionItem[], sec: Section) => {
+  const renderActions = (items: ActionItem[], _sec: Section) => {
     const active = items.filter(a => {
       const s = getState(a.id, a)
       return !s.done && !s.dismissed
