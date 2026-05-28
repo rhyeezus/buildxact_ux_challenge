@@ -1,0 +1,60 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+  gap: 24px;
+}
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.toggle-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.toggle-btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--grey-500);
+  transition: all 0.15s;
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.toggle-btn:not(.active):hover {
+  background: var(--grey-100);
+  color: var(--grey-700);
+}
+
+.mobile-frame-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-frame-wrapper {
+  width: 100%;
+  max-width: 1280px;
+}

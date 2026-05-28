@@ -1,0 +1,129 @@
+.perms-list {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: 14px;
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.perm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.perm-text {
+  flex: 1;
+}
+
+.perm-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--grey-800);
+}
+
+.perm-label.perm-danger {
+  color: var(--danger);
+}
+
+.perm-desc {
+  font-size: 13px;
+  color: var(--grey-500);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.perm-locked {
+  font-size: 11px;
+  color: var(--grey-400);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Toggle switch */
+.toggle {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--grey-200);
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle.on {
+  background: var(--accent);
+}
+
+.toggle.danger-on {
+  background: var(--danger);
+}
+
+.toggle.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.toggle.on .toggle-thumb {
+  transform: translateX(20px);
+}
+
+/* Danger zone */
+.danger-zone {
+  background: var(--danger-light);
+  border: 1.5px solid #FCA5A5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: slide-in 0.2s ease;
+}
+
+.danger-zone-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.danger-icon {
+  font-size: 16px;
+}
+
+.danger-zone p {
+  font-size: 13px;
+  color: #991B1B;
+  line-height: 1.5;
+}
+
+.perms-footer {
+  font-size: 12px;
+  color: var(--grey-400);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

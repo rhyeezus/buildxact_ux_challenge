@@ -1,0 +1,70 @@
+.mobile-frame {
+  width: 390px;
+  min-height: 844px;
+  background: var(--grey-50);
+  border-radius: 48px;
+  box-shadow:
+    0 0 0 10px var(--grey-800),
+    0 0 0 12px var(--grey-700),
+    0 32px 64px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-notch {
+  height: 44px;
+  background: var(--grey-800);
+  border-radius: 0 0 20px 20px;
+  width: 120px;
+  align-self: center;
+  margin-top: -1px;
+  flex-shrink: 0;
+}
+
+.mobile-screen {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+}
+
+.mobile-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  background: white;
+  border-top: 1px solid var(--grey-200);
+  padding: 8px 0 20px;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 0;
+  color: var(--grey-400);
+  transition: color 0.15s;
+}
+
+.nav-item.active {
+  color: var(--accent);
+}
+
+.nav-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}

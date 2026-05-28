@@ -1,0 +1,114 @@
+.email-setup-screen .screen-body {
+  justify-content: center;
+}
+
+.email-card {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--grey-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.email-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grey-800);
+  padding: 10px 14px;
+  background: var(--grey-50);
+  border-radius: 8px;
+  border: 1px solid var(--grey-200);
+}
+
+.email-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.email-question {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--grey-700);
+}
+
+.email-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-email-panel {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: slide-in 0.2s ease;
+}
+
+.folder-option {
+  border: 1.5px dashed var(--grey-300);
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.folder-option:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.folder-option.expanded {
+  cursor: default;
+  border-style: solid;
+  border-color: var(--grey-200);
+  background: white;
+}
+
+.folder-option-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.folder-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.folder-option-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-700);
+}
+
+.folder-option-desc {
+  font-size: 13px;
+  color: var(--grey-500);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
