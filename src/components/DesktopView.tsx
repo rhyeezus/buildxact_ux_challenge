@@ -144,7 +144,7 @@ export default function DesktopView() {
                   >
                     <div className="detail-action-top">
                       <span className={`badge ${item.confidence === 'high' ? 'badge-high' : 'badge-review'}`}>
-                        {item.confidence === 'high' ? '● High confidence' : '◐ Review suggested'}
+                        {item.confidence === 'high' ? '✦ AI: confident' : '✦ AI: review first'}
                       </span>
                       {delegated[item.id] && (
                         <span className="delegated-chip">→ {delegated[item.id].split(' ')[0]}</span>

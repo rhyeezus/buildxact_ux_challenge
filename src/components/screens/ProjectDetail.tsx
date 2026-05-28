@@ -119,7 +119,7 @@ function ActionCard({ item, onConfirm, onDismiss }: { item: ActionItem; onConfir
     <div className="action-card">
       <div className="action-top">
         <span className={`badge ${item.confidence === 'high' ? 'badge-high' : 'badge-review'}`}>
-          {item.confidence === 'high' ? '● High confidence' : '◐ Review suggested'}
+          {item.confidence === 'high' ? '✦ AI: confident' : '✦ AI: review first'}
         </span>
       </div>
       <div className="action-text">{item.text}</div>
