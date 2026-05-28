@@ -13,6 +13,7 @@ type Section = 'today' | 'week' | 'month'
 export default function ProjectDetail({ projectName, onBack }: Props) {
   const project = PROJECTS.find(p => p.name === projectName)!
   const [expanded, setExpanded] = useState<Set<Section>>(new Set(['today']))
+  const [summaryOpen, setSummaryOpen] = useState(false)
   const [actionStates, setActionStates] = useState<Record<string, { done: boolean; dismissed: boolean }>>({})
 
   const getState = (id: string, orig: { done: boolean; dismissed: boolean }) =>
@@ -73,6 +74,22 @@ export default function ProjectDetail({ projectName, onBack }: Props) {
       </div>
 
       <div className="detail-project-name">{project.name}</div>
+
+      <button
+        className={`ai-summary-bar ${summaryOpen ? 'open' : ''}`}
+        onClick={() => setSummaryOpen(s => !s)}
+      >
+        <span className="ai-summary-bar-left">
+          <span className="ai-summary-icon">✦</span>
+          <span className="ai-summary-bar-label">AI project summary</span>
+        </span>
+        <span className="ai-summary-arrow">{summaryOpen ? '▲' : '▼'}</span>
+      </button>
+      {summaryOpen && (
+        <div className="ai-summary-body">
+          {project.aiSummary}
+        </div>
+      )}
 
       <div className="detail-sections">
         {sections.map(sec => (

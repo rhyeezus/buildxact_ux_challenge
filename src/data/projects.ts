@@ -12,6 +12,7 @@ export interface Project {
   status: 'on-track' | 'needs-attention' | 'overdue'
   lastActivity: string
   urgentAction: string
+  aiSummary: string
   thread: string
   threadSummary: string
   actionsToday: ActionItem[]
@@ -26,6 +27,7 @@ export const PROJECTS: Project[] = [
     status: 'overdue',
     lastActivity: '2 hours ago',
     urgentAction: 'Approve variation — additional ridge capping',
+    aiSummary: 'Roofing is at variation stage. An unapproved variation for additional ridge capping ($1,840 + GST) is holding up Thursday\'s delivery. Progress claim #3 is pending sign-off and a final inspection needs to be scheduled before practical completion.',
     thread: 'From: mike@supalockroofing.com.au\nSubject: Variation Request — Ridge Capping\n\nHi Dave,\n\nAs discussed on-site yesterday, we need to add an additional 14m of ridge capping to the eastern elevation due to the design change approved last week.\n\nThis will come in at approx. $1,840 + GST. Please confirm approval so we can schedule the delivery for Thursday.\n\nCheers,\nMike\nSupalock Roofing',
     threadSummary: 'Supalock Roofing is requesting approval for a variation — additional ridge capping ($1,840 + GST) due to a design change. Delivery scheduled for Thursday pending your approval.',
     actionsToday: [
@@ -49,6 +51,7 @@ export const PROJECTS: Project[] = [
     status: 'needs-attention',
     lastActivity: '4 hours ago',
     urgentAction: 'Overdue invoice — $4,200 outstanding',
+    aiSummary: 'Materials supply is tracking to schedule but a $4,200 invoice is 14 days overdue and at risk of triggering a credit hold. Timber frame delivery for week 3 needs confirming and an insulation upgrade quote is awaiting review.',
     thread: 'From: accounts@boralsupplies.com.au\nSubject: OVERDUE: Invoice #BRL-2204\n\nDear Dave,\n\nThis is a reminder that Invoice #BRL-2204 for $4,200 (incl. GST) is now 14 days overdue.\n\nPayment was due 14 May 2026. Please arrange payment or contact us to discuss.\n\nRegards,\nBoral Supplies Accounts',
     threadSummary: 'Boral Supplies is chasing an overdue invoice of $4,200 (incl. GST) — 14 days past due date. Immediate payment or contact required to avoid credit hold.',
     actionsToday: [
@@ -69,6 +72,7 @@ export const PROJECTS: Project[] = [
     status: 'on-track',
     lastActivity: 'Yesterday',
     urgentAction: 'Site inspection booked — confirm attendance',
+    aiSummary: 'Project is on track. Frame stage inspection is confirmed for Thursday 30 May at 9am — site access and permit display required. Waterproofing certificate still needs to be submitted to council before the next stage.',
     thread: 'From: council@localcouncil.gov.au\nSubject: Inspection Booking Confirmation\n\nDear Mr. Builder,\n\nYour building inspection has been confirmed for Thursday 30 May at 9:00am.\n\nInspector: Graham Walsh\nInspection type: Frame stage\n\nPlease ensure the site is accessible and the permit is displayed.\n\nLocal Council Building Services',
     threadSummary: 'Frame stage inspection confirmed for Thursday 30 May at 9:00am with Graham Walsh. Site access and permit display required.',
     actionsToday: [],
