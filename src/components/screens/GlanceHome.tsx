@@ -27,7 +27,6 @@ export default function GlanceHome({ onSelectProject, onResync, onViewActions }:
     <div className="screen glance-screen">
       <div className="glance-header">
         <div className="bx-logo">Buildxact</div>
-        <button className="notif-btn">🔔</button>
       </div>
 
       <div className="glance-greeting">
